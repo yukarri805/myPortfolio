@@ -1,0 +1,36 @@
+.title {
+    color: #02ccba;
+}
+
+body {
+    background-color: #263238;
+}
+
+h1 {
+    color:  #02ccba;
+}
+
+p {
+    color:  #25d315;
+}
+
+.logo{
+	width: 300px;
+}
+
+#unko{
+    height: 100px;
+    width: 100px;
+    background-color: #F44336;
+    position: relative;
+    left: 0;
+    transition: 2.5s;
+}
+
+
+#unko.active {
+    background-color: #2196F3;
+    left: calc(100% - 100px);
+}
+
+
