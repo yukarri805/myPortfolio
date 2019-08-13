@@ -12,14 +12,14 @@ scrollTop('js-totop', 500);
 
 // ---------------------------------------------- //
 // function : トップに戻る
-// argument : ID名、TOPに到達するまでの時間(500ms)
+// argument : ID名、TOPに到達するまでの時間(ms)
 // ---------------------------------------------- //
 function scrollTop(elem, duration) {
   let target = document.getElementById(elem);
   target.addEventListener('click', function () {
     //現在のスクロール量を取得
     let currentY = window.pageYOffset;
-    // 一回スクロールする量です。時間に対して距離が短い場合は10pxずつスクロールさせます.距離が長い場合は100pxずつスクロールさせます。
+    // 一回スクロールする量。時間に対して距離が短い場合は10pxずつスクロールさせる.距離が長い場合は100pxずつスクロールさせる。
     let step = duration / currentY > 1 ? 10 : 100;
     let timeStep = duration / currentY * step;
     let intervalID = setInterval(_scrollUp, timeStep);
