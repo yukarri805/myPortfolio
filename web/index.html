@@ -33,6 +33,9 @@
   <div class="inner">
     <section class="content">
       <h2><img src="img/comment.png" width="136" height="25" alt="comment"></h2>
+      <div id="today" 　class="comment">
+        {{ message }}
+      </div>
       <p class="comment">コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>コメントコメントコメントコメントコメントコメントコメントコメントコメント<br>コメントコメントコメントコメントコメントコメントコメントコメントコメント</p>
     </section>
     <section class="content">
@@ -65,6 +68,12 @@
       <p class="copy"><small>Copy@websitecrator</small></p>
     </div>
   </footer>
+
   <script type="text/javascript" src="./js/main.js"></script>
+
+  <!-- Vue読み込み。本番バージョン、サイズと速度のために最適化されています -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script type="text/javascript" src="./js/vue.js"></script>
+
 </body>
 </html>
