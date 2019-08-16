@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta charset="utf-8">
+  <title>Lambda test</title>
+</head>
+<body>
+  <h1 class="title">Lambda test</h1>
+
+  <h2>海外生活費用診断</h2>
+
+  <form action="http://foo.com" method="post">
+    <p>国を選択
+    <select name="country" required>
+      <option value="">選択してください</option>
+      <option value="オーストラリア">オーストラリア</option>
+      <option value="ニュージーランド">ニュージーランド</option>
+      <option value="カナダ">カナダ</option>
+    </select></p>
+
+    <p>VISAを選択：
+    <label><input type="radio" name="visa" value="学生" required>学生</label>
+    <label><input type="radio" name="visa" value="ワーキングホリデー">ワーキングホリデー</label>
+    <label><input type="radio" name="visa" value="観光">観光</label></p>
+
+    <p>修学週数を入力
+    <input type="number" name="study_weeks" min="2" max="48"></p>
+
+    <p>滞在週数を入力
+    <input type="number" name="stay_weeks" min="2" max="48"></p>
+    <p><input type="submit" value="送信する"></p>
+
+  </form>
+
+  <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
