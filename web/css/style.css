@@ -1,5 +1,5 @@
 /* CSS Document */
-body, p, ul, dl, dt, dd, h1, h2, h3, h4, h5, h6 {
+body, p, ul, dl, dt, dd, h1, h2, h3, h4, h5, h6, ul, li {
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
@@ -49,32 +49,6 @@ nav {
 	display: block;
 	height: 100%;
 	width: 100%;
-}
-.navi .home a {
-	background-image:url(img/nav_home.png);
-}.navi .htmlcss a {
-	background-image:url(img/nav_htmlcss.png);
-}.navi .dreamweaver a {
-	background-image:url(img/nav_bk_Dream);
-}.navi .aips a {
-	background-image:url(img/nav_aips.png);
-}.navi .jpuery a {
-	background-image:url(img/nav_jquery.png);
-}.navi .works a {
-	background-image:url(img/nav_works.png);
-}
-.navi .home a:hover {
-	background-image:url(img/nav_bk_home.png);
-}.navi .htmlcss a:hover {
-	background-image:url(img/nav_bk_htmlcss.png);
-}.navi .dreamweaver a:hover {
-	background-image:url(img/nav_bk_Dream.png);
-}.navi .aips a:hover {
-	background-image:url(img/nav_bk_aips.png);
-}.navi .jpuery a:hover {
-	background-image:url(img/nav_bk_jquery.png);
-}.navi .works a:hover {
-	background-image:url(img/nav_bk_works.png);
 }
 .visual {
 	margin-top:10px;
