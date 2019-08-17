@@ -4,35 +4,56 @@
   <link rel="stylesheet" href="./css/style.css">
   <meta charset="utf-8">
   <title>Lambda test</title>
+
+
+
+
 </head>
 <body>
   <h1 class="title">Lambda test</h1>
 
   <h2>海外生活費用診断</h2>
 
-  <form action="http://foo.com" method="post">
-    <p>国を選択
-    <select name="country" required>
+  <!--
+  //<form action="http://foo.com" method="post">
+  -->
+  <p>国を選択
+    <select id="country" required>
       <option value="">選択してください</option>
       <option value="オーストラリア">オーストラリア</option>
       <option value="ニュージーランド">ニュージーランド</option>
       <option value="カナダ">カナダ</option>
     </select></p>
 
-    <p>VISAを選択：
-    <label><input type="radio" name="visa" value="学生" required>学生</label>
-    <label><input type="radio" name="visa" value="ワーキングホリデー">ワーキングホリデー</label>
-    <label><input type="radio" name="visa" value="観光">観光</label></p>
+  <p>VISAを選択：
+        <select id="visa" required>
+          <option value="">選択してください</option>
+          <option value="学生">学生</option>
+          <option value="ワーキングホリデー">ワーキングホリデー</option>
+          <option value="観光">観光</option>
+  </select></p>
 
-    <p>修学週数を入力
-    <input type="number" name="study_weeks" min="2" max="48"></p>
 
-    <p>滞在週数を入力
-    <input type="number" name="stay_weeks" min="2" max="48"></p>
-    <p><input type="submit" value="送信する"></p>
+  <p>修学週数を入力
+    <input type="number" id="study_weeks" min="2" max="48"></p>
 
+  <p>滞在週数を入力
+    <input type="number" id="stay_weeks" min="2" max="48"></p>
+  <!--
+  <p><input type="submit" value="送信する"></p>
   </form>
+  -->
 
+  <p></p>
+
+  <input type="button" value="読込" onclick="load();" />
+  <input type="button" value="保存" onclick="save();" />
+
+  <div id="country_out"></div>
+  <div id="visa_out"></div>
+  <div id="study_weeks_out"></div>
+  <div id="stay_weeks_out"></div>
+  <script src="./js/vendor/store.legacy.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
