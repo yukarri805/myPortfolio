@@ -1,21 +1,12 @@
-function clickTest() {
-  target = document.getElementById("unko");
-  if (target.className == null || target.className == "") {
-    target.className = "active";
-  } else {
-    target.className = "";
-  }
-}
-
-// topボタン。id名とTOPに到達するまでの時間を指定(500ms)
-scrollTop('js-totop', 500);
-
 // ---------------------------------------------- //
-// function : トップに戻る
-// argument : ID名、TOPに到達するまでの時間(ms)
+// function : トップに戻る.ID名にイベントリスナーを追加し、クリックでイベント発火.
+// argument :
+// return :
 // ---------------------------------------------- //
-function scrollTop(elem, duration) {
-  let target = document.getElementById(elem);
+scrollTop();
+function scrollTop() {
+  let target = document.getElementById('js-totop'); //ID名指定
+  let duration = 500; // TOPに到達するまでの時間(ms)
   target.addEventListener('click', function () {
     //現在のスクロール量を取得
     let currentY = window.pageYOffset;
@@ -33,4 +24,17 @@ function scrollTop(elem, duration) {
       }
     }
   });
+}
+
+// ---------------------------------------------- //
+// function : 今日の日付をyyyy年mm月dd日 X曜日形式で取得
+// argument :
+// return : 日付情報（yyyy年mm月dd日 X曜日形式）
+// ---------------------------------------------- //
+function getToday() {
+  let today = new Date();
+  let yobi = new Array("日", "月", "火", "水", "木", "金", "土");
+  let week = today.getDay();
+  today = today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日 " + yobi[week] + "曜日";
+  return today;
 }
