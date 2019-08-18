@@ -41,12 +41,14 @@ function getToday() {
 
 
 
-function load() {
 
-  document.getElementById("country_out").innerHTML = store.get("country");
-  document.getElementById("visa_out").innerHTML = store.get("visa");
-  document.getElementById("study_weeks_out").innerHTML = store.get("study_weeks");
-  document.getElementById("stay_weeks_out").innerHTML = store.get("stay_weeks");
+window.onload = load;
+
+function load() {
+  document.getElementById("country").innerHTML = store.get("country");
+  document.getElementById("visa").innerHTML = store.get("visa");
+  document.getElementById("study_weeks").innerHTML = store.get("study_weeks");
+  document.getElementById("stay_weeks").innerHTML = store.get("stay_weeks");
   /*
   let data = store.get("otherBudgets");
   console.log(data);
@@ -57,8 +59,6 @@ function load() {
   */
 }
 
-
-// TODO save系の共通化
 /**************************************************
 function : localStorageにデータを保存(store.jsを利用)
 argument : 取得する値のid

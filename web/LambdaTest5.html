@@ -5,10 +5,16 @@
   <meta charset="utf-8">
   <title>Lambda test4</title>
 
-
-
-
+  <script type="text/javascript">
+    window.onload = function onLoad() {
+      document.getElementById("country").innerHTML = store.get("country");
+      document.getElementById("visa").innerHTML = store.get("visa");
+      document.getElementById("study_weeks").innerHTML = store.get("study_weeks");
+      document.getElementById("stay_weeks").innerHTML = store.get("stay_weeks");
+    }
+  </script>
 </head>
+
 <body>
   <h1 class="title">Lambda test</h1>
 
@@ -19,7 +25,7 @@
   //<form action="http://foo.com" method="post">
   -->
 
-  <p>以下で送信しますか？</p>
+  <p>以下で診断しますか？</p>
 
   <script src="./js/vendor/store.legacy.min.js"></script>
   <script>
@@ -28,17 +34,39 @@
     });
   </script>
 
-  <p>国：</p>
-  <div id="country"></div>
-  <p>VISA：</p>
-  <div id="visa"></div>
-  <p>修学週数：</p>
-  <div id="study_weeks"></div>
-  <p>滞在週数：</p>
-  <div id="stay_weeks"></div>
 
+  <table border="1">
+    <tr>
+      <th>国</th>
+      <td>
+        <div id="country"></div>
+      </td>
+    </tr>
+    <tr>
+      <th>VISA</th>
+      <td>
+        <div id="visa"></div>
+      </td>
+    </tr>
+    <tr>
+      <th>修学週数</th>
+      <td>
+        <div id="study_weeks"></div>
+      </td>
+    </tr>
+    <tr>
+      <th>滞在週数</th>
+      <td>
+        <div id="stay_weeks"></div>
+      </td>
+    </tr>
+  </table>
+
+
+  <input type="button" value="Read" onclick="load();" />
   <input type="button" onclick="location.href='./LambdaTest4.html'" value="Back">
   <input type="button" value="send" />
+
 
   <script type="text/javascript" src="./js/main.js"></script>
 </body>
