@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta charset="utf-8">
+  <title>Lambda test4</title>
+
+
+
+
+</head>
+<body>
+  <h1 class="title">Lambda test</h1>
+
+  <h2>海外生活費用診断</h2>
+  <h3>質問4</h3>
+
+  <!--
+  //<form action="http://foo.com" method="post">
+  -->
+
+  <p>滞在週数を入力
+    <input type="number" id="stay_weeks" min="2" max="48"></p>
+  <p></p>
+
+  <input type="button" value="Read" onclick="load();" />
+  <input type="button" onclick="location.href='./LambdaTest5.html';save('stay_weeks');" value="Next">
+  <input type="button" onclick="location.href='./LambdaTest3.html'" value="Back">
+
+  <div id="country_out"></div>
+  <div id="visa_out"></div>
+  <div id="study_weeks_out"></div>
+  <div id="stay_weeks_out"></div>
+  <script src="./js/vendor/store.legacy.min.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

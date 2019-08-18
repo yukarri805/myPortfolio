@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta charset="utf-8">
+  <title>Lambda test4</title>
+
+
+
+
+</head>
+<body>
+  <h1 class="title">Lambda test</h1>
+
+  <h2>海外生活費用診断</h2>
+  <h3>確認画面</h3>
+
+  <!--
+  //<form action="http://foo.com" method="post">
+  -->
+
+  <p>以下で送信しますか？</p>
+
+  <script src="./js/vendor/store.legacy.min.js"></script>
+  <script>
+    store.each(function (value, key) {
+      document.getElementById(key).innerHTML = value;
+    });
+  </script>
+
+  <p>国：</p>
+  <div id="country"></div>
+  <p>VISA：</p>
+  <div id="visa"></div>
+  <p>修学週数：</p>
+  <div id="study_weeks"></div>
+  <p>滞在週数：</p>
+  <div id="stay_weeks"></div>
+
+  <input type="button" onclick="location.href='./LambdaTest4.html'" value="Back">
+  <input type="button" value="send" />
+
+  <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

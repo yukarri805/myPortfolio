@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="./css/style.css">
   <meta charset="utf-8">
-  <title>Lambda test</title>
+  <title>Lambda test1</title>
 
 
 
@@ -13,6 +13,7 @@
   <h1 class="title">Lambda test</h1>
 
   <h2>海外生活費用診断</h2>
+  <h3>質問1</h3>
 
   <!--
   //<form action="http://foo.com" method="post">
@@ -25,30 +26,11 @@
       <option value="カナダ">カナダ</option>
     </select></p>
 
-  <p>VISAを選択：
-        <select id="visa" required>
-          <option value="">選択してください</option>
-          <option value="学生">学生</option>
-          <option value="ワーキングホリデー">ワーキングホリデー</option>
-          <option value="観光">観光</option>
-  </select></p>
+  <input type="button" value="Read" onclick="load();" />
+  <input type="button" onclick="location.href='./LambdaTest2.html';save('country');" value="Next">
 
 
-  <p>修学週数を入力
-    <input type="number" id="study_weeks" min="2" max="48"></p>
-
-  <p>滞在週数を入力
-    <input type="number" id="stay_weeks" min="2" max="48"></p>
-  <!--
-  <p><input type="submit" value="送信する"></p>
-  </form>
-  -->
-
-  <p></p>
-
-  <input type="button" value="読込" onclick="load();" />
-  <input type="button" value="保存" onclick="save();" />
-
+  </a>
   <div id="country_out"></div>
   <div id="visa_out"></div>
   <div id="study_weeks_out"></div>

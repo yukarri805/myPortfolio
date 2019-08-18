@@ -42,31 +42,29 @@ function getToday() {
 
 
 function load() {
+
+  document.getElementById("country_out").innerHTML = store.get("country");
+  document.getElementById("visa_out").innerHTML = store.get("visa");
+  document.getElementById("study_weeks_out").innerHTML = store.get("study_weeks");
+  document.getElementById("stay_weeks_out").innerHTML = store.get("stay_weeks");
+  /*
   let data = store.get("otherBudgets");
   console.log(data);
   document.getElementById("country_out").innerHTML = data.country;
   document.getElementById("visa_out").innerHTML = data.visa;
   document.getElementById("study_weeks_out").innerHTML = data.study_weeks;
   document.getElementById("stay_weeks_out").innerHTML = data.stay_weeks;
-}
-
-function save() {
-  let country_data = document.getElementById("country").value;
-  let visa_data = document.getElementById("visa").value;
-  let study_weeks_data = document.getElementById("study_weeks").value;
-  let stay_weeks_data = document.getElementById("stay_weeks").value;
-
-  var key = "otherBudgets";
-  var data = { country: country_data, visa: visa_data, study_weeks: study_weeks_data, stay_weeks: stay_weeks_data };
-  saveStrore(key, data);
+  */
 }
 
 
+// TODO save系の共通化
 /**************************************************
 function : localStorageにデータを保存(store.jsを利用)
-argument :
+argument : 取得する値のid
 return :
 **************************************************/
-function saveStrore(key, value) {
+function save(key) {
+  let value = document.getElementById(key).value;
   store.set(key, value)
 }
