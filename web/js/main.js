@@ -42,22 +42,6 @@ function getToday() {
 
 
 
-window.onload = load;
-
-function load() {
-  document.getElementById("country").innerHTML = store.get("country");
-  document.getElementById("visa").innerHTML = store.get("visa");
-  document.getElementById("study_weeks").innerHTML = store.get("study_weeks");
-  document.getElementById("stay_weeks").innerHTML = store.get("stay_weeks");
-  /*
-  let data = store.get("otherBudgets");
-  console.log(data);
-  document.getElementById("country_out").innerHTML = data.country;
-  document.getElementById("visa_out").innerHTML = data.visa;
-  document.getElementById("study_weeks_out").innerHTML = data.study_weeks;
-  document.getElementById("stay_weeks_out").innerHTML = data.stay_weeks;
-  */
-}
 
 /**************************************************
 function : localStorageにデータを保存(store.jsを利用)
@@ -68,3 +52,26 @@ function save(key) {
   let value = document.getElementById(key).value;
   store.set(key, value)
 }
+
+function send(key) {
+  let value = document.getElementById(key).value;
+  store.set(key, value)
+}
+
+function load() {
+  store.each(function (value, key) {
+    console.log(value);
+    document.getElementById(key).innerHTML = value;
+  });
+}
+
+/*
+function load() {
+  let data = store.get("otherBudgets");
+  console.log(data);
+  document.getElementById("country_out").innerHTML = data.country;
+  document.getElementById("visa_out").innerHTML = data.visa;
+  document.getElementById("study_weeks_out").innerHTML = data.study_weeks;
+  document.getElementById("stay_weeks_out").innerHTML = data.stay_weeks;
+}
+*/
